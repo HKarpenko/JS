@@ -1,0 +1,7 @@
+<% locals.radio.forEach( option => { %>
+    <input type="radio" id='<%= option.value %>'
+    name="contact">
+        <label for='<%= option.value %>'>
+            <%= option.text %>
+        </label>
+<% }) %>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ 
+<div class="container">
+  <h2 class="text-center title"><%= title %></h2>
+    <% if(uploadStatus == true){ %>
+    <label for="message" class="alert alert-success">Uploaded successfully</label>
+    <% } %>
+    <form action="/singleFile" enctype="multipart/form-data" method="POST">
+        <h4 >File:</h4>
+        <input type="file"  id="singleFile" name="singleFile" required>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>
+ 
+</body>
+</html>
